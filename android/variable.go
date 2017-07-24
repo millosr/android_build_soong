@@ -108,6 +108,10 @@ type variableProperties struct {
 			Cflags []string
 		}
 
+		Needs_text_relocations struct {
+			Cppflags []string
+		}
+
 		Has_fmradio_bcm struct {
 			Cflags   []string
 			Cppflags []string
@@ -192,6 +196,8 @@ type productVariables struct {
 	Legacy_blob_compatible     *bool `json:",omitempty"`
 	Has_legacy_camera_hal1     *bool `json:",omitempty"`
 	Uses_media_extensions      *bool `json:",omitempty"`
+	Needs_text_relocations     *bool `json:",omitempty"`
+
 	Has_fmradio_bcm            *bool `json:",omitempty"`
 }
 
