@@ -90,6 +90,10 @@ type variableProperties struct {
 			Cflags   []string
 			Cppflags []string
 		}
+
+		Has_legacy_camera_hal1 struct {
+			Cflags []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -156,7 +160,8 @@ type productVariables struct {
 
 	Override_rs_driver *string `json:",omitempty"`
 
-	Legacy_blob_compatible *bool `json:",omitempty"`
+	Legacy_blob_compatible     *bool `json:",omitempty"`
+	Has_legacy_camera_hal1     *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
