@@ -188,6 +188,7 @@ type productVariables struct {
 
 	DeviceKernelHeaders []string `json:",omitempty"`
 
+	Libart_img_base            *string `json:",omitempty"`
 	Legacy_blob_compatible     *bool `json:",omitempty"`
 	Has_legacy_camera_hal1     *bool `json:",omitempty"`
 	Uses_media_extensions      *bool `json:",omitempty"`
