@@ -85,6 +85,11 @@ type variableProperties struct {
 			Cflags   []string
 			Cppflags []string
 		}
+
+		Legacy_blob_compatible struct {
+			Cflags   []string
+			Cppflags []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -150,6 +155,8 @@ type productVariables struct {
 	BtConfigIncludeDir *string `json:",omitempty"`
 
 	Override_rs_driver *string `json:",omitempty"`
+
+	Legacy_blob_compatible *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
