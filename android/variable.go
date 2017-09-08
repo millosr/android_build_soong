@@ -110,6 +110,11 @@ type variableProperties struct {
 		Uses_qcom_bsp_legacy struct {
 			Cflags []string
 		}
+
+		Legacy_blob_compatible struct {
+			Cflags   []string
+			Cppflags []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -188,6 +193,7 @@ type productVariables struct {
 	Needs_text_relocations *bool `json:",omitempty"`
 	Target_shim_libs *string `json:",omitempty"`
 	Uses_qcom_bsp_legacy *bool `json:",omitempty"`
+	Legacy_blob_compatible *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
