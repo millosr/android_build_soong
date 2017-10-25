@@ -112,6 +112,10 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
+		Qcom_bsp_legacy struct {
+			Cflags []string
+		}
+
 		Has_fmradio_bcm struct {
 			Cflags   []string
 			Cppflags []string
@@ -197,6 +201,7 @@ type productVariables struct {
 	Has_legacy_camera_hal1     *bool `json:",omitempty"`
 	Uses_media_extensions      *bool `json:",omitempty"`
 	Needs_text_relocations     *bool `json:",omitempty"`
+	Qcom_bsp_legacy            *bool `json:",omitempty"`
 
 	Has_fmradio_bcm            *bool `json:",omitempty"`
 }
