@@ -107,6 +107,13 @@ type variableProperties struct {
 		Uses_media_extensions struct {
 			Cflags []string
 		}
+
+		Has_fmradio_bcm struct {
+			Cflags   []string
+			Cppflags []string
+			Srcs     []string
+			Static_libs []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -184,6 +191,7 @@ type productVariables struct {
 	Legacy_blob_compatible     *bool `json:",omitempty"`
 	Has_legacy_camera_hal1     *bool `json:",omitempty"`
 	Uses_media_extensions      *bool `json:",omitempty"`
+	Has_fmradio_bcm            *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
