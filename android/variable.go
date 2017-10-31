@@ -115,6 +115,13 @@ type variableProperties struct {
 			Cflags   []string
 			Cppflags []string
 		}
+
+		Has_fmradio_bcm struct {
+			Cflags   []string
+			Cppflags []string
+			Srcs     []string
+			Static_libs []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -191,9 +198,10 @@ type productVariables struct {
 
 	Has_legacy_camera_hal1 *bool `json:",omitempty"`
 	Needs_text_relocations *bool `json:",omitempty"`
-	Target_shim_libs *string `json:",omitempty"`
-	Uses_qcom_bsp_legacy *bool `json:",omitempty"`
+	Target_shim_libs       *string `json:",omitempty"`
+	Uses_qcom_bsp_legacy   *bool `json:",omitempty"`
 	Legacy_blob_compatible *bool `json:",omitempty"`
+	Has_fmradio_bcm        *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
